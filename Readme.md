@@ -1,7 +1,7 @@
 You can add android platform by following command:
 
-ionic capacitor add android
+###### ionic capacitor add android
 
 You can add ios platform by following command:
 
-ionic capacitor add ios
+###### ionic capacitor add ios
