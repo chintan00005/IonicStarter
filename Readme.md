@@ -1,3 +1,7 @@
-You can add mobile platform by following command:
+You can add android platform by following command:
 
-ionic capacitor add <platform>
+ionic capacitor add android
+
+You can add ios platform by following command:
+
+ionic capacitor add ios
