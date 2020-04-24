@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Offers</ion-title>
+    <ion-button slot="primary" fill="clear" (click)="onNavigateNewOffer()">
+      <ion-icon name="add-circle-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid *ngIf="loadedPlacesList.length==0">
+    <ion-row>
+      <ion-col size="12"  size-sm="8" offset-sm="2" class="ion-text-center">
+        <p>No place is available....</p>
+    </ion-col>
+    </ion-row>
+  </ion-grid>
+<ion-grid *ngIf="loadedPlacesList.length>0">
+  <ion-row>
+    <ion-col size="12" size-sm="8" offset-sm="2" class="ion-text-center">
+      <ion-list>
+        <ion-item-sliding *ngFor="let i of loadedPlacesList" #item>
+          <app-offer-item [i]="i"></app-offer-item>
+        <ion-item-options>
+          <ion-item-option color="danger" (click)="onNavigateEditScreen(i.id,item)">
+            <ion-icon  name="create" slot="icon-only" ></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

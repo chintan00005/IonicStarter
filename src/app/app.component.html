@@ -1,3 +1,35 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu slide="start" menuId="lm" contentId="main"> 
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>MyApp</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle>
+        <ion-item lines="none" (click)="onNavigateToDiscover()"> 
+          <ion-icon slot="start" name="business" >
+          </ion-icon>
+          <ion-label>Discover Places</ion-label>
+        </ion-item>
+        <ion-menu-toggle>
+      </ion-menu-toggle>
+        <ion-item lines="none" (click)="onNavigateToBookings()">
+          <ion-icon slot="start" name="checkbox-outline">
+          </ion-icon>
+          <ion-label>Your Bookings</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <ion-item lines="none" (click)="onLogout()">
+          <ion-icon slot="start" name="exit">
+          </ion-icon>
+          <ion-label>Exit</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

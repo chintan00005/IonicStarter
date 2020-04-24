@@ -1,0 +1,26 @@
+.divClass{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.margin-class{
+    margin-left: 10px;
+}
+
+.date-text-style{
+    color: var(--ion-color-primary);
+}
+
+.icon-style{
+    color: var(--ion-color-primary);
+}
+
+.title-text-style{
+    color: var(--ion-color-primary);
+    font-size: 20px;
+    border: 1px solid var(--ion-color-primary) ;
+    padding: 5px;
+    border-radius: 3px;
+
+}

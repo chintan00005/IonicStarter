@@ -1,0 +1,18 @@
+<ion-item  (click)="onNavigateDetails(i.id)" >
+<ion-thumbnail slot="start">
+  <ion-img [src]="i.image">
+
+  </ion-img>
+</ion-thumbnail>
+<ion-label>
+<h5 class="title-text-style">{{i.title}}</h5>
+<p>{{i.description}}</p>
+<div class="divClass">
+  <ion-icon name="calendar" class="margin-class icon-style"></ion-icon>
+  <ion-text class="margin-class date-text-style">{{getDummyDate() | date}}</ion-text>
+  <span class="margin-class">|</span>
+  <ion-icon class="margin-class icon-style" name="calendar"></ion-icon>
+  <ion-text class="margin-class date-text-style">{{getDummyDate() | date}}</ion-text>
+</div>
+</ion-label>
+</ion-item>
